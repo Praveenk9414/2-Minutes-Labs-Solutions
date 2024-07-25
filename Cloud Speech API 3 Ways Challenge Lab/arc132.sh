@@ -79,7 +79,7 @@ curl -s -X POST -H "Content-Type: application/json" \
 response=$(curl -s -X POST \
 -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
 -H "Content-Type: application/json; charset=utf-8" \
--d "{\"q\": \"$task_4_sentence\"}" \
+-d "{\"q\": [\"$task_4_sentence\"]}" \
 "https://translation.googleapis.com/language/translate/v2?key=${API_KEY}&source=ja&target=en")
 echo "$response" > "$task_4_file"
 
